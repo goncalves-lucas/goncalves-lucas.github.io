@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucas Eduardo Cavalare Gonçalves · Portfólio</title>
+<meta name="description" content="Portfólio de Lucas Eduardo Cavalare Gonçalves com o projeto Mercadin, sistema de gestão para mercado.">
+<style>
+  :root {
+    --fundo: #f6f7f2;
+    --papel: #ffffff;
+    --tinta: #1c2a24;
+    --suave: #55655d;
+    --verde: #1e5a43;
+    --verde-escuro: #123a2b;
+    --etiqueta: #f2c230;
+    --linha: #d9dfd6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fundo: #121a16;
+      --papel: #1a2520;
+      --tinta: #e9efe9;
+      --suave: #a3b3aa;
+      --verde: #6fcf9f;
+      --verde-escuro: #0c1411;
+      --linha: #2b3a33;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--tinta);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+  .sans, h1, h2, h3, .etiqueta, .chip, footer { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; }
+
+  /* Topo */
+  header {
+    background: var(--verde-escuro);
+    color: #f4f7f3;
+    padding: 4rem 1.25rem 3.5rem;
+  }
+  .miolo { max-width: 46rem; margin: 0 auto; }
+  header h1 {
+    margin: 0 0 .5rem;
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  header .curso { margin: 0; font-size: 1.15rem; color: #d3e0d8; }
+  header .frase { margin: 1.25rem 0 0; max-width: 34rem; color: #b9cbc0; font-style: italic; }
+
+  /* Projeto */
+  main { padding: 3rem 1.25rem 1rem; }
+  .projeto-titulo {
+    display: inline-block;
+    background: var(--etiqueta);
+    color: #2a2200;
+    padding: .35rem .9rem .35rem 1.1rem;
+    margin: 0 0 .75rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    clip-path: polygon(0 0, calc(100% - .8rem) 0, 100% 50%, calc(100% - .8rem) 100%, 0 100%);
+    padding-right: 1.6rem;
+  }
+  .resumo { margin: 0 0 2.5rem; color: var(--suave); }
+
+  section.bloco {
+    background: var(--papel);
+    border: 1px solid var(--linha);
+    border-left: 6px solid var(--verde);
+    padding: 1.5rem 1.5rem 1.25rem;
+    margin: 0 0 1.5rem;
+  }
+  section.bloco h2 {
+    margin: 0 0 .6rem;
+    font-size: 1.3rem;
+    color: var(--verde);
+  }
+  section.bloco p { margin: 0 0 .9rem; }
+  section.bloco ul { margin: 0 0 .5rem; padding-left: 1.25rem; }
+  section.bloco li { margin-bottom: .45rem; }
+  h3 { font-size: 1rem; margin: 1.2rem 0 .4rem; color: var(--tinta); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin: .4rem 0 1rem; padding: 0; list-style: none; }
+  .chip {
+    font-size: .85rem;
+    padding: .2rem .65rem;
+    border: 1px solid var(--verde);
+    color: var(--verde);
+    border-radius: 999px;
+    margin: 0;
+  }
+
+  table { width: 100%; border-collapse: collapse; font-family: "Segoe UI", system-ui, sans-serif; font-size: .92rem; margin: .5rem 0 1rem; }
+  th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { color: var(--suave); font-weight: 600; }
+  .rolagem { overflow-x: auto; }
+
+  /* Rodapé */
+  footer {
+    margin-top: 3rem;
+    background: var(--verde-escuro);
+    color: #e3ece6;
+    padding: 2.5rem 1.25rem;
+  }
+  footer h2 { margin: 0 0 .75rem; font-size: 1.15rem; }
+  footer ul { list-style: none; margin: 0; padding: 0; }
+  footer li { margin-bottom: .35rem; }
+  footer a { color: var(--etiqueta); }
+  footer a:focus-visible, a:focus-visible { outline: 3px solid var(--etiqueta); outline-offset: 2px; }
+  .nota { font-size: .85rem; color: #a9bdb1; margin-top: 1.25rem; }
+
+  @media (max-width: 480px) {
+    header { padding: 2.5rem 1rem 2.25rem; }
+    section.bloco { padding: 1.1rem 1rem .9rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="miolo">
+    <h1>Lucas Eduardo Cavalare Gonçalves</h1>
+    <p class="curso">Análise e Desenvolvimento de Sistemas · Fatec de Araçatuba</p>
+    <p class="frase">Gosto de transformar código em soluções que funcionam de verdade, do banco de dados à tela, sempre de olho no que o mercado de trabalho pede.</p>
+  </div>
+</header>
+
+<main>
+  <div class="miolo">
+
+    <h2 class="projeto-titulo">Mercadin</h2>
+    <p class="resumo">Sistema web de gestão para mercado: produtos, estoque, compras, fornecedores e funcionários, com login e controle de acesso.</p>
+
+    <section class="bloco">
+      <h2>Problema</h2>
+      <p>Um mercado precisa saber o que tem em estoque, o que está perto de vencer, o que foi comprado e de qual fornecedor. Quando essas informações ficam espalhadas, é fácil perder produto por validade e perder o controle do que foi comprado.</p>
+      <p>Além disso, nem todo mundo na equipe deve poder alterar tudo: é preciso separar quem só consulta de quem administra.</p>
+    </section>
+
+    <section class="bloco">
+      <h2>O que eu fiz</h2>
+      <p>Desenvolvi o Mercadin completo: uma API própria e uma interface web conectada a ela. Pela interface é possível cadastrar e consultar produtos, lotes de estoque, compras, fornecedores e funcionários, com um painel inicial que destaca o que precisa de atenção.</p>
+    </section>
+
+    <section class="bloco">
+      <h2>Como eu fiz</h2>
+
+      <h3>Ferramentas</h3>
+      <ul class="chips">
+        <li class="chip">React 19</li>
+        <li class="chip">Vite</li>
+        <li class="chip">React Router</li>
+        <li class="chip">Node.js</li>
+        <li class="chip">Express 5</li>
+        <li class="chip">TypeScript</li>
+        <li class="chip">Prisma 7</li>
+        <li class="chip">MySQL / MariaDB</li>
+        <li class="chip">Zod</li>
+        <li class="chip">JWT</li>
+        <li class="chip">bcryptjs</li>
+      </ul>
+
+      <h3>API (back-end)</h3>
+      <ul>
+        <li>Organizada em camadas: rotas, controllers, services e schemas de validação.</li>
+        <li>Autenticação por login com token JWT e senhas armazenadas com hash (bcrypt).</li>
+        <li>Três perfis de usuário (admin, user e cliente): qualquer usuário autenticado consulta; criar, alterar e excluir é restrito ao administrador.</li>
+        <li>Validação dos dados de entrada com Zod antes de chegar ao banco.</li>
+        <li>Listagens com paginação.</li>
+        <li>Ao registrar uma compra, o sistema cria automaticamente o lote correspondente no estoque, dentro de uma transação, para que as duas informações não fiquem inconsistentes.</li>
+      </ul>
+
+      <h3>Banco de dados</h3>
+      <p>Modelado com Prisma e versionado por migration. Seis tabelas: usuários, produtos, estoque, compras, fornecedores e funcionários, ligadas por relações (um produto tem lotes de estoque e compras; uma compra pode ter um fornecedor e gera um lote de estoque).</p>
+
+      <h3>Interface (front-end)</h3>
+      <ul>
+        <li>Tela de login e rotas protegidas: só entra quem estiver autenticado.</li>
+        <li>Dashboard com o total de produtos e fornecedores, os itens mais próximos do vencimento (vencidos ou a até 30 dias), os de menor quantidade em estoque e as compras mais recentes.</li>
+        <li>Telas de cadastro, edição e exclusão para produtos, estoque, compras, fornecedores e funcionários, com confirmação antes de excluir e máscaras nos campos de entrada.</li>
+      </ul>
+    </section>
+
+    <section class="bloco">
+      <h2>Resultado</h2>
+      <p>O resultado é um sistema funcional de ponta a ponta, com front-end e API integrados:</p>
+      <div class="rolagem">
+        <table>
+          <tr><th>Item</th><th>Entrega</th></tr>
+          <tr><td>Telas</td><td>7 (login, dashboard e 5 telas de cadastro)</td></tr>
+          <tr><td>Recursos da API</td><td>6 (usuários, produtos, estoque, compras, fornecedores, funcionários), cada um com consulta, criação, alteração e exclusão</td></tr>
+          <tr><td>Tabelas no banco</td><td>6, com relações entre elas</td></tr>
+          <tr><td>Perfis de acesso</td><td>3 (admin, user, cliente)</td></tr>
+        </table>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="miolo">
+    <h2>Contato</h2>
+    <ul>
+      <li>GitHub: <a href="https://github.com/goncalves-lucas">github.com/goncalves-lucas</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/lucasgoncalves2211">linkedin.com/in/lucasgoncalves2211</a></li>
+      <li>E-mail: <a href="mailto:lucas.eduardo1ofc@gmail.com">lucas.eduardo1ofc@gmail.com</a></li>
+    </ul>
+    <p class="nota">Projeto desenvolvido como trabalho acadêmico.</p>
+  </div>
+</footer>
+
+</body>
+</html>
